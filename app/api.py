@@ -1,5 +1,5 @@
 import requests
-from app.models import Station
+from app.models import TmpStation
 
 class apiClass():
     def getListOfStation():
@@ -11,7 +11,7 @@ class apiClass():
 
 
         for station in json_output:
-            stationObj = Station (
+            stationObj = TmpStation (
                 id = station["id"], 
                 stationName = station["stationName"],
                 gegrLat = station["gegrLat"],
